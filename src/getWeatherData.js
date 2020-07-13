@@ -27,6 +27,7 @@ const weatherInfo = async () => {
         const response = await fetch(weatherApi, { mode: "cors" });
     const data = await response.json();
         console.log(data);
+        
     } catch (err) {
         console.log(err)
     }

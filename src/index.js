@@ -1,6 +1,8 @@
 
-import searchBar from './search'
+// import searchBar from './search'
 import weatherInfo from './getWeatherData'
+import displayBody from './body'
 
-searchBar();
+displayBody();
+// searchBar();
 weatherInfo();
