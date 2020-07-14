@@ -1,19 +1,8 @@
-// import displayBody from './body'
-
-// displayBody();
-
-const weatherInfo = async () => {
+const weatherInfo = async (info) => {
     try {
-        const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=Lagos&APPID=2874e0623c8807994e18916c8cd78f21`;
+        const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${info}&APPID=2874e0623c8807994e18916c8cd78f21`;
         const response = await fetch(weatherApi, { mode: "cors" });
         const data = await response.json();
-
-        const displayContent = document.querySelector('.display-content');
-        const searchForm = document.querySelector('#search-form');
-        const searchInput = document.querySelector('#search-input');
-        const searchBtn = document.querySelector('#search-btn');
-
-        const renderData = document.querySelector('.renderData');
         const city = document.querySelector('#city');
         const currentWeather = document.querySelector('#current-weather');
         const tempInCelius = document.querySelector('#tempInCelius');
@@ -37,7 +26,7 @@ const weatherInfo = async () => {
         const btn1 = document.querySelector('#toggleBtnF');
         const btn2 = document.querySelector('#toggleBtnC');
         btn2.style.display = 'none';
-        
+
         btn1.addEventListener('click', () => {
             tempInCelius.style.display = 'none';
             tempInFahrenheit.style.display = 'block';
