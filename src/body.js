@@ -18,7 +18,8 @@ const displayBody = () => {
             <p id='current-weather'>p</p>
             <p id='tempInCelius'>p</p>
             <p id='tempInFahrenheit'>p</p>
-            <button id='toggleBtn'>Change to F</button>
+            <button id='toggleBtnF'>Change to Fahrenheit</button>
+            <button id='toggleBtnC'>Change to Celius</button>
             <p id='feels-like'>p</p>
             <p id='humidity'>p</p>
             <p id='wind'>p</p>

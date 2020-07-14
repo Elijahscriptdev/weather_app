@@ -1,26 +1,3 @@
-// console.log('err');
-// const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=Lagos&APPID=2874e0623c8807994e18916c8cd78f21`;
-// const wetherData = fetch(weatherApi, { mode: "cors" })
-//     .then(response => response.json())
-//     .then(response => console.log(response.weather))
-//     .catch(e => {
-//         console.log(e)
-//     })
-
-// const container = document.getElementById('main-container')
-
-// async function getCats() {
-//     try {
-//         const response = await fetch('https://api.giphy.com/v1/gifs/translate?api_key=bb2006d9d3454578be1a99cfad65913d&s=cat', { mode: 'cors' });
-//         const catData = await response.json();
-//         const img = document.createElement('img');
-//         img.src = catData.data.images.original.url;
-//         container.appendChild(img);
-//     } catch (err) {
-//         console.log(err)
-//     }
-// }
-
 // import displayBody from './body'
 
 // displayBody();
@@ -39,53 +16,41 @@ const weatherInfo = async () => {
         const renderData = document.querySelector('.renderData');
         const city = document.querySelector('#city');
         const currentWeather = document.querySelector('#current-weather');
-        const temp = document.querySelector('#temp');
-        // const tempbtn = document.createElement('button')
-        // tempbtn.setAttribute('type', 'button');
-        // tempbtn.textContent = 'Change to F'
+        const tempInCelius = document.querySelector('#tempInCelius');
+        const tempInFahrenheit = document.querySelector('#tempInFahrenheit');
+        tempInFahrenheit.style.display = 'none';
         const feels = document.querySelector('#feels-like');
         const humidity = document.querySelector('#humidity');
         const wind = document.querySelector('#wind');
         const windDirection = document.querySelector('#wind-direction');
 
-        // console.log(data);
-
         city.innerHTML = `City: ${data.name} ${data.sys.country}`
         currentWeather.innerHTML = `Current Weather: ${data.weather[0].main}`
         let tempInKelvin = data.main.temp;
-        // temp.innerHTML = `Temperature: ${Math.floor(tempInKelvin + -273.15)} `
+        tempInCelius.innerHTML = `Temperature: ${Math.floor(tempInKelvin + -273.15)} C`
+        tempInFahrenheit.innerHTML = `Temperature: ${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} F`
         feels.innerHTML = `Feels: ${data.main.feels_like}`
         humidity.innerHTML = `humidity: ${data.main.humidity}`
         wind.innerHTML = `Wind Speed: ${data.wind.speed}`
         windDirection.innerHTML = `Wind Direction: ${data.wind.deg}`
 
-        const btn = document.querySelector('#toggleBtn');
-        btn.addEventListener('click', function () {
-            // if (a) {
-            //     temp.style.display = "block";
-            //     temp.innerHTML = `Temperature: ${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} `
-            // } else {
-            //     temp.style.display = "none";
-            //     temp.innerHTML = `Temperature: ${Math.floor(tempInKelvin + -273.15)} `
-            // }
-            // const convertToCelsius = tempInKelvin => Math.floor(tempInKelvin + -273.15);
-            // const convertToFahrenheit = tempInKelvin => Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32);
-            // let celsius = () => {
-            //     tempInKelvin = Math.floor(tempInKelvin + -273.15);
-            //     return tempInKelvin;
-            // }
-            // convertToCelsius()
-            // celsius();
+        const btn1 = document.querySelector('#toggleBtnF');
+        const btn2 = document.querySelector('#toggleBtnC');
+        btn2.style.display = 'none';
+        
+        btn1.addEventListener('click', () => {
+            tempInCelius.style.display = 'none';
+            tempInFahrenheit.style.display = 'block';
+            btn1.style.display = 'none';
+            btn2.style.display = 'block';
+        });
 
-            //     if (temp.innerHTML = `Temperature: ${tempInKelvin} `) {
-            //         // console.log(data);
-            //         // temp.innerHTML = `Temperature: ${data.main.temp} `
-            //         temp.style.display = "block";
-            //     } else {
-            //         temp.style.display = "none";
-            //     }
-            console.log('here')
-        })
+        btn2.addEventListener('click', () => {
+            tempInCelius.style.display = 'block';
+            tempInFahrenheit.style.display = 'none';
+            btn1.style.display = 'block';
+            btn2.style.display = 'none';
+        });
 
     } catch (err) {
         console.log(err);
