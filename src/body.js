@@ -10,20 +10,20 @@ const displayBody = () => {
 
         <form action="" id="search-form">
             <input type="text" placeholder="Enter your city..." name="searchInput" id="search-input">
-            <button id="search-btn">Search</button>
+            <button type='button' id="search-btn">Search</button>
         </form>
 
         <div class='renderData'>
-            <p id='city'>p</p>
-            <p id='current-weather'>p</p>
-            <p id='tempInCelius'>p</p>
-            <p id='tempInFahrenheit'>p</p>
+            <p id='city'></p>
+            <p id='current-weather'></p>
+            <p id='tempInCelius'></p>
+            <p id='tempInFahrenheit'></p>
             <button id='toggleBtnF'>Change to Fahrenheit</button>
             <button id='toggleBtnC'>Change to Celius</button>
-            <p id='feels-like'>p</p>
-            <p id='humidity'>p</p>
-            <p id='wind'>p</p>
-            <p id='wind-direction'>p</p>
+            <p id='feels-like'></p>
+            <p id='humidity'></p>
+            <p id='wind'></p>
+            <p id='wind-direction'></p>
         </div>
 
     </main>
