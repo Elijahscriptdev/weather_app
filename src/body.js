@@ -14,13 +14,13 @@ const displayBody = () => {
         </form>
 
         <div class='renderData'>
-            <p id='city'></p>
-            <p id='current-weather'></p>
-            <p id='temp'></p>
-            <p id='feels-like'></p>
-            <p id='humidity'></p>
-            <p id='wind'></p>
-            <p id='wind-dir'></p>
+            <p id='city'>p</p>
+            <p id='current-weather'>p</p>
+            <p id='temp'>p</p>
+            <p id='feels-like'>p</p>
+            <p id='humidity'>p</p>
+            <p id='wind'>p</p>
+            <p id='wind-direction'>p</p>
         </div>
 
     </main>
