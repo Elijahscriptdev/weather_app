@@ -36,6 +36,7 @@ const weatherInfo = async (info) => {
     }
 
     const btn = document.querySelector('#toggleBtn');
+    btn.innerHTML = 'Change to Fahrenheit';
     const x = document.querySelector('.temp');
     const tempInKelvin = data.main.temp;
     x.innerHTML = `${Math.floor(tempInKelvin + -273.15)} °C`;
@@ -43,8 +44,10 @@ const weatherInfo = async (info) => {
     const toggle = () => {
       if (x.innerHTML === `${Math.floor(tempInKelvin + -273.15)} °C`) {
         x.innerHTML = `${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} °F`;
+        btn.innerHTML = 'Change to Celius';
       } else {
         x.innerHTML = `${Math.floor(tempInKelvin + -273.15)} °C`;
+        btn.innerHTML = 'Change to Fahrenheit';
       }
     };
 

@@ -17,7 +17,7 @@ const displayBody = () => {
         <div class='renderData'>
             <p id='city'></p>
             <p id='current-weather'></p>
-            <p id='tempInCelius' class='temp'></p>
+            <p class='temp'></p>
             <button id='toggleBtn'></button>
             <p id='feels-like'></p>
             <p id='humidity'></p>
