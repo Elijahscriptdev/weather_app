@@ -5,9 +5,6 @@ const weatherInfo = async (info) => {
     const data = await response.json();
     const city = document.querySelector('#city');
     const currentWeather = document.querySelector('#current-weather');
-    const tempInCelius = document.querySelector('#tempInCelius');
-    const tempInFahrenheit = document.querySelector('#tempInFahrenheit');
-    tempInFahrenheit.style.display = 'none';
     const feels = document.querySelector('#feels-like');
     const humidity = document.querySelector('#humidity');
     const wind = document.querySelector('#wind');
@@ -15,9 +12,6 @@ const weatherInfo = async (info) => {
 
     city.innerHTML = `City: ${data.name} ${data.sys.country}`;
     currentWeather.innerHTML = `Current Weather: ${data.weather[0].main}`;
-    const tempInKelvin = data.main.temp;
-    tempInCelius.innerHTML = `${Math.floor(tempInKelvin + -273.15)} C`;
-    tempInFahrenheit.innerHTML = `${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} F`;
     feels.innerHTML = `Feels: ${data.main.feels_like}`;
     humidity.innerHTML = `humidity: ${data.main.humidity}`;
     wind.innerHTML = `Wind Speed: ${data.wind.speed}`;
@@ -41,22 +35,21 @@ const weatherInfo = async (info) => {
       body.style.backgroundImage = 'url(https://www.queenelizabethparkuganda.com/wp-content/uploads/2019/03/placeholder_thumb_1152x648.jpg)';
     }
 
-    const btn1 = document.querySelector('#toggleBtnF');
-    const btn2 = document.querySelector('#toggleBtnC');
-    btn2.style.display = 'none';
+    const btn = document.querySelector('#toggleBtn');
+    const x = document.querySelector('.temp');
+    const tempInKelvin = data.main.temp;
+    x.innerHTML = `${Math.floor(tempInKelvin + -273.15)} °C`;
 
-    btn1.addEventListener('click', () => {
-      tempInCelius.style.display = 'none';
-      tempInFahrenheit.style.display = 'block';
-      btn1.style.display = 'none';
-      btn2.style.display = 'block';
-    });
+    const toggle = () => {
+      if (x.innerHTML === `${Math.floor(tempInKelvin + -273.15)} °C`) {
+        x.innerHTML = `${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} °F`;
+      } else {
+        x.innerHTML = `${Math.floor(tempInKelvin + -273.15)} °C`;
+      }
+    };
 
-    btn2.addEventListener('click', () => {
-      tempInCelius.style.display = 'block';
-      tempInFahrenheit.style.display = 'none';
-      btn1.style.display = 'block';
-      btn2.style.display = 'none';
+    btn.addEventListener('click', () => {
+      toggle();
     });
   } catch (error) {
     const err = document.createElement('p');

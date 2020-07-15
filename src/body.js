@@ -18,9 +18,7 @@ const displayBody = () => {
             <p id='city'></p>
             <p id='current-weather'></p>
             <p id='tempInCelius' class='temp'></p>
-            <p id='tempInFahrenheit' class='temp'></p>
-            <button id='toggleBtnF'>Change to Fahrenheit</button>
-            <button id='toggleBtnC'>Change to Celius</button>
+            <button id='toggleBtn'></button>
             <p id='feels-like'></p>
             <p id='humidity'></p>
             <p id='wind'></p>
