@@ -1,5 +1,5 @@
 const displayBody = () => {
-  const body = document.querySelector('#main-container')
+  const body = document.querySelector('#main-container');
   body.innerHTML = `
     <nav class="title-text">
         <h1>Weather App</h1>
@@ -28,7 +28,7 @@ const displayBody = () => {
         </div>
 
     </main>
-`
-}
+`;
+};
 
 export default displayBody;
