@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  font-family: Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: url('./images/marcel-oliveira-huqp0k2z9ww-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-text {
+    text-align: center;
+    color: ivory;
+    margin-top: 50px;
+}
+
+.title-text h1 {
+    font-size: 3.5rem;
+}
+
+.title-text p {
+  font-size: 1.5rem;
+  color: lavenderblush;
+  font-weight: bold;
+}
+
+.display-content {
+  text-align: center;
+  color: lavenderblush;
+}
+
+.display-content {
+  text-align: center;
+  color: lavenderblush;
+}
+
+.display-content button {
+  margin: 10px auto!important;
+  padding: 10px;
+  border-radius: 20%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.renderData {
+    background-color: #000;
+    opacity: 0.6;
+    padding: 30px;
+    width: 500px;
+    margin: 100px auto;
+}
+
+.renderData .temp {
+  font-size: 75px;
+}
+
+.renderData p,.renderData button {
+  margin: 10px;
+}
+
+.searchinput {
+  line-height: 100%;
+  display: table;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.text {
+  width: 40%;
+  height: 20px;
+  padding: 20px;
+  color: rgb(23, 63, 196);
+  border: 1px solid rgb(23, 63, 196);
+  box-shadow: 1px 0px 3px rgb(23, 63, 196);
+  border-radius: 50px;
+  font-size: 15px;
+  text-transform: capitalize;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(23, 63, 196);
+}
+
+::-moz-input-placeholder {
+  color: rgb(23, 63, 196);
+}
+
+::-ms-input-placeholder {
+  color: rgb(23, 63, 196);
+}
+
+.text:focus {
+  box-shadow: 1px 1px 8px rgb(23, 63, 196);
+}
+
+.submit {
+  padding: 10px;
+  height: 40px;
+  width: 80px;
+  font-size: 13px;
+  color: white;
+  background: rgb(23, 63, 196);
+  border: none;
+  margin: 10px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px rgb(23, 63, 196);
+  outline: none;
+  cursor: pointer;
+}
+
+.submit:active {
+  box-shadow: 0px 0px 7px rgb(23, 63, 196);
+}

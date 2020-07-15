@@ -16,8 +16,8 @@ const weatherInfo = async (info) => {
         city.innerHTML = `City: ${data.name} ${data.sys.country}`
         currentWeather.innerHTML = `Current Weather: ${data.weather[0].main}`
         let tempInKelvin = data.main.temp;
-        tempInCelius.innerHTML = `Temperature: ${Math.floor(tempInKelvin + -273.15)} C`
-        tempInFahrenheit.innerHTML = `Temperature: ${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} F`
+        tempInCelius.innerHTML = `${Math.floor(tempInKelvin + -273.15)} C`
+        tempInFahrenheit.innerHTML = `${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} F`
         feels.innerHTML = `Feels: ${data.main.feels_like}`
         humidity.innerHTML = `humidity: ${data.main.humidity}`
         wind.innerHTML = `Wind Speed: ${data.wind.speed}`
