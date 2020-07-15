@@ -8,20 +8,20 @@
 }
 
 body {
-    background: url('./images/marcel-oliveira-huqp0k2z9ww-unsplash.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background: url('./images/marcel-oliveira-huqp0k2z9ww-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title-text {
-    text-align: center;
-    color: ivory;
-    margin-top: 50px;
+  text-align: center;
+  color: ivory;
+  margin-top: 50px;
 }
 
 .title-text h1 {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 .title-text p {
@@ -41,7 +41,7 @@ body {
 }
 
 .display-content button {
-  margin: 10px auto!important;
+  margin: 10px auto !important;
   padding: 10px;
   border-radius: 20%;
   cursor: pointer;
@@ -49,18 +49,19 @@ body {
 }
 
 .renderData {
-    background-color: #000;
-    opacity: 0.6;
-    padding: 30px;
-    width: 500px;
-    margin: 100px auto;
+  background-color: #000;
+  opacity: 0.6;
+  padding: 30px;
+  width: 500px;
+  margin: 100px auto;
 }
 
 .renderData .temp {
   font-size: 75px;
 }
 
-.renderData p,.renderData button {
+.renderData p,
+.renderData button {
   margin: 10px;
 }
 
@@ -74,7 +75,7 @@ body {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
 }
 
 .text {
@@ -123,4 +124,11 @@ body {
 
 .submit:active {
   box-shadow: 0px 0px 7px rgb(23, 63, 196);
+}
+
+.err {
+  background: rgb(23, 63, 196);
+  color: white;
+  width: 150px;
+  margin: 0 auto;
 }

@@ -23,6 +23,24 @@ const weatherInfo = async (info) => {
     wind.innerHTML = `Wind Speed: ${data.wind.speed}`;
     windDirection.innerHTML = `Wind Direction: ${data.wind.deg}`;
 
+    const body = document.querySelector('body');
+
+    if (data.weather[0].main.toLowerCase() === 'clouds') {
+      body.style.backgroundImage = 'url(https://res.cloudinary.com/elijjaaahhhh/image/upload/v1594821934/marcel-oliveira-huqp0k2z9ww-unsplash_jyhb29.jpg)';
+    } else if (data.weather[0].main.toLowerCase() === 'drizzle') {
+      body.style.backgroundImage = 'url(https://res.cloudinary.com/elijjaaahhhh/image/upload/v1594820961/anna-king-rNBaaxyeWWM-unsplash_bdnhkc.jpg)';
+    } else if (data.weather[0].main.toLowerCase() === 'rain') {
+      body.style.backgroundImage = 'url(https://www.sciencenews.org/wp-content/uploads/2018/11/112718_KP_rainfall_feat.jpg)';
+    } else if (data.weather[0].main.toLowerCase() === 'thunderstorm') {
+      body.style.backgroundImage = 'url(https://www.stormgeo.com/assets/ArticleImages/thunderstorm-flipped__FocusFillWzQyODgsMjcwMCwieSIsNzRd.jpg)';
+    } else if (data.weather[0].main.toLowerCase() === 'snow') {
+      body.style.backgroundImage = 'url(https://www.washingtonpost.com/resizer/ZVTyknssC3yXxy2zWKyvRXkJA0=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/OMPC2AQTQEI6VESMWNGQTO6JJA.jpg)';
+    } else if (data.weather[0].main.toLowerCase() === 'mist' || data.weather[0].main.toLowerCase() === 'haze') {
+      body.style.backgroundImage = 'url(https://res.cloudinary.com/elijjaaahhhh/image/upload/v1594820553/peter-oslanec-AsTuH7M7ImY-unsplash_nwoszd.jpg)';
+    } else {
+      body.style.backgroundImage = 'url(https://www.queenelizabethparkuganda.com/wp-content/uploads/2019/03/placeholder_thumb_1152x648.jpg)';
+    }
+
     const btn1 = document.querySelector('#toggleBtnF');
     const btn2 = document.querySelector('#toggleBtnC');
     btn2.style.display = 'none';
@@ -42,9 +60,8 @@ const weatherInfo = async (info) => {
     });
   } catch (error) {
     const err = document.createElement('p');
-    const errMessage = document.querySelector('.searchinput');
-    errMessage.appendChild(err);
-    err.innerHTML = error.message;
+    err.setAttribute('class', 'err');
+    err.innerHTML = 'Enter a valid city';
   }
 };
 
