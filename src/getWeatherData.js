@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+
 const weatherInfo = async (info) => {
   try {
     const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${info}&APPID=2874e0623c8807994e18916c8cd78f21`;
@@ -45,7 +45,7 @@ const weatherInfo = async (info) => {
     const err = document.createElement('p');
     const errMessage = document.querySelector('.searchinput');
     errMessage.appendChild(err);
-    err.innerHTML;
+    err.innerHTML = error.message;
   }
 };
 
