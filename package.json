@@ -14,7 +14,7 @@
     "javascript",
     "node"
   ],
-  "author": "Seth Zea and Elijah Obominuru",
+  "author": "Elijah Obominuru",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.0",
