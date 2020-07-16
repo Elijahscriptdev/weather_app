@@ -18,7 +18,7 @@ const weatherInfo = async (info) => {
     windDirection.innerHTML = `Wind Direction: ${data.wind.deg}`;
 
     const body = document.querySelector('body');
-
+    // render background
     if (data.weather[0].main.toLowerCase() === 'clouds') {
       body.style.backgroundImage = 'url(https://res.cloudinary.com/elijjaaahhhh/image/upload/v1594821934/marcel-oliveira-huqp0k2z9ww-unsplash_jyhb29.jpg)';
     } else if (data.weather[0].main.toLowerCase() === 'drizzle') {
