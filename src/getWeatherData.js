@@ -35,19 +35,21 @@ const weatherInfo = async (info) => {
       body.style.backgroundImage = 'url(https://www.queenelizabethparkuganda.com/wp-content/uploads/2019/03/placeholder_thumb_1152x648.jpg)';
     }
 
-    const btn = document.querySelector('#toggleBtn');
-    btn.innerHTML = 'Change to Fahrenheit';
+    const btn = document.querySelector('.celsius');
+    btn.textContent = 'Change to Fahrenheit';
     const x = document.querySelector('.temp');
     const tempInKelvin = data.main.temp;
-    x.innerHTML = `${Math.floor(tempInKelvin + -273.15)} °C`;
+    x.textContent = `${Math.floor(tempInKelvin + -273.15)} °C`;
 
     const toggle = () => {
-      if (x.innerHTML === `${Math.floor(tempInKelvin + -273.15)} °C`) {
-        x.innerHTML = `${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} °F`;
-        btn.innerHTML = 'Change to Celius';
+      if (btn.classList.contains('celsius')) {
+        x.textContent = `${Math.floor(((tempInKelvin - 273.15) * 9) / 5 + 32)} °F`;
+        btn.textContent = 'Change to Celsius';
+        btn.classList.remove('celsius');
       } else {
-        x.innerHTML = `${Math.floor(tempInKelvin + -273.15)} °C`;
-        btn.innerHTML = 'Change to Fahrenheit';
+        x.textContent = `${Math.floor(tempInKelvin + -273.15)} °C`;
+        btn.textContent = 'Change to Fahrenheit';
+        btn.classList.add('celsius');
       }
     };
 
