@@ -17,7 +17,7 @@ body {
 .title-text {
   text-align: center;
   color: ivory;
-  margin-top: 50px;
+  margin-top: 65px;
 }
 
 .title-text h1 {
@@ -25,9 +25,14 @@ body {
 }
 
 .title-text p {
+  margin-top: 30px;
   font-size: 1.5rem;
   color: lavenderblush;
   font-weight: bold;
+}
+
+.searchinput {
+  margin-top: 30px;
 }
 
 .display-content {
@@ -126,4 +131,38 @@ body {
   color: white;
   width: 150px;
   margin: 0 auto;
+}
+
+.footer {
+  margin-top: 70px;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer-link:hover,
+.social-list-link:hover {
+  opacity: .6;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.social-list-item {
+  margin: 0 2em;
+}
+
+a .fas {
+  margin: 15px;
+  font-size: 35px;
+  color: #fff;
+
 }

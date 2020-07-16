@@ -26,6 +26,30 @@ const displayBody = () => {
         </div>
 
     </main>
+
+    <footer class="footer">
+        <a href="mailto:elijjaaahhhh@gmail.com" class="footer-link">
+            elijjaaahhhh@gmail.com
+        </a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <!-- <a href="" class="social-list-link"></a> -->
+                <a href="https://github.com/Elijahscriptdev" class="social-list-link"><i class="fab fa-github"></i></a>
+            </li>
+            <li class="social-list-item">
+                <!-- <a href="" class="social-list-link"></a> -->
+                <a href="https://twitter.com/ElijahObominuru" class="social-list-link"><i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li class="social-list-item">
+                <!-- <a href="" class="social-list-link"></a> -->
+                <a href="https://www.linkedin.com/in/elijah-obominuru-0b730b143/" class="social-list-link"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="social-list-item">
+                <!-- <a href="" class="social-list-link"></a> -->
+                <a href="https://www.instagram.com/elijjaaahhhh/" class="social-list-link"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
 `;
 };
 
