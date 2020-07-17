@@ -9,7 +9,7 @@ A weather forecast site using the weather API where users able to search for a s
 
 ### Homepage
 
-![homepage](https://res.cloudinary.com/elijjaaahhhh/image/upload/v1594778603/FireShot_Capture_142_-_Weather_App_-_localhost_erorvx.png)
+![homepage](https://res.cloudinary.com/elijjaaahhhh/image/upload/v1594945063/FireShot_Capture_148_-_Weather_App_-_currentweathernow.netlify.app_s9fthb.png)
 
 ## Built With
 
